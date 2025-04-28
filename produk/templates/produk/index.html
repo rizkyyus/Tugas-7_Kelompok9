@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toko Online - Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+        }
+        .featured {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 30%;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Toko Online</h1>
+        <p>Pusat belanja elektronik terlengkap dan terpercaya</p>
+    </header>
+    
+    <nav>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'produk_list' %}">Daftar Produk</a>
+        <a href="{% url 'about' %}">Tentang Kami</a>
+        <a href="{% url 'kontak' %}">Kontak</a>
+    </nav>
+    
+    <div class="content">
+        <h2>Produk Unggulan</h2>
+        <p>Berikut adalah beberapa produk unggulan kami:</p>
+        
+        <div class="featured">
+            <div class="product-card">
+                <h3>Laptop ASUS</h3>
+                <p>Rp 15.000.000</p>
+                <a href="{% url 'produk_detail' 1 %}">Lihat Detail</a>
+            </div>
+            
+            <div class="product-card">
+                <h3>Smartphone Samsung</h3>
+                <p>Rp 8.000.000</p>
+                <a href="{% url 'produk_detail' 2 %}">Lihat Detail</a>
+            </div>
+            
+            <div class="product-card">
+                <h3>Headphone Sony</h3>
+                <p>Rp 2.500.000</p>
+                <a href="{% url 'produk_detail' 3 %}">Lihat Detail</a>
+            </div>
+        </div>
+        
+        <p>
+            <a href="{% url 'produk_list' %}">Lihat Semua Produk</a>
+        </p>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Toko Online. Hak Cipta Dilindungi.</p>
+    </footer>
+</body>
+</html>

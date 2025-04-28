@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toko Online - Detail Produk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+        }
+        .product-detail {
+            display: flex;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .product-image {
+            width: 400px;
+            height: 300px;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .product-info {
+            flex: 1;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Detail Produk</h1>
+    </header>
+    
+    <nav>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'produk_list' %}">Daftar Produk</a>
+        <a href="{% url 'about' %}">Tentang Kami</a>
+        <a href="{% url 'kontak' %}">Kontak</a>
+    </nav>
+    
+    <div class="content">
+        <div class="product-detail">
+            <div class="product-image">
+                <p>[Gambar Produk]</p>
+            </div>
+            
+            <div class="product-info">
+                <h2>{{ produk.nama }}</h2>
+                <p><strong>Harga:</strong> {{ produk.harga }}</p>
+                <p><strong>Deskripsi:</strong></p>
+                <p>{{ produk.deskripsi }}</p>
+                
+                <h3>Spesifikasi</h3>
+                <ul>
+                    <li>Fitur 1</li>
+                    <li>Fitur 2</li>
+                    <li>Fitur 3</li>
+                </ul>
+                
+                <h3>Ketersediaan</h3>
+                <p>Stok tersedia</p>
+                
+                <button>Tambah ke Keranjang</button>
+            </div>
+        </div>
+        
+        <a href="{% url 'produk_list' %}" class="back-button">Kembali ke Daftar Produk</a>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Toko Online. Hak Cipta Dilindungi.</p>
+    </footer>
+</body>
+</html>

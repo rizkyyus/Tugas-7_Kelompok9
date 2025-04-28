@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toko Online - Kontak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+        }
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        .contact-form {
+            max-width: 600px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hubungi Kami</h1>
+    </header>
+    
+    <nav>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'produk_list' %}">Daftar Produk</a>
+        <a href="{% url 'about' %}">Tentang Kami</a>
+        <a href="{% url 'kontak' %}">Kontak</a>
+    </nav>
+    
+    <div class="content">
+        <div class="contact-info">
+            <h2>Informasi Kontak</h2>
+            <p><strong>Alamat:</strong> Jl. Contoh No. 123, Darussalam, Banda Aceh</p>
+            <p><strong>Telepon:</strong> (021) 1234-5678</p>
+            <p><strong>Email:</strong> info@tokoonline.com</p>
+            <p><strong>Jam Operasional:</strong> Senin - Jumat, 08:00 - 17:00 WIB</p>
+        </div>
+        
+        <div class="contact-form">
+            <h2>Kirim Pesan</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subjek">Subjek:</label>
+                    <input type="text" id="subjek" name="subjek" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Toko Online. Hak Cipta Dilindungi.</p>
+    </footer>
+</body>
+</html>
