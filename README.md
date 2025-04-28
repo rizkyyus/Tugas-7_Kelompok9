@@ -111,14 +111,10 @@ Beberapa ide untuk mengembangkan proyek ini lebih lanjut:
 6. Optimasi SEO
 7. Responsive design
 
-## Lisensi
 
-[MIT](LICENSE)
-
-## Kontribusi
-
-Kontribusi selalu diterima dengan baik! Silakan buat issue atau pull request jika Anda menemukan bug atau ingin menambahkan fitur baru.
 
 ## Pembuat
 
-[Nama Anda](https://github.com/username)
+- Rizky Yusmansyah   (2208107010024)
+- Fadli Ahmad Yazid  (2208107010032)
+- Andika Pebriansyah (2208107010058)
